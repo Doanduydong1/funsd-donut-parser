@@ -1,0 +1,14 @@
+.git
+.idea
+.venv
+venv
+**/__pycache__
+*.pyc
+*.pyo
+*.pyd
+mlruns/
+**/mlruns/
+parsed_outputs/
+funsd_dataset/testing_data/images/*
+funsd_dataset/testing_data/annotations/*
+*.log

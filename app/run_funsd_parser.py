@@ -1,9 +1,7 @@
 # app/run_funsd_parser.py
 
 import argparse
-import glob
 import json
-import os
 from pathlib import Path
 
 import mlflow
@@ -46,7 +44,7 @@ def setup_argument_parser():
     parser.add_argument(
         "--max_images_to_process",
         type=int,
-        default=5, # Xử lý ít ảnh để test nhanh, đặc biệt cho dự án 1 ngày
+        default=5,
         help="Maximum number of images to process. Set to 0 or negative for all images."
     )
     parser.add_argument(
@@ -89,7 +87,7 @@ def process_single_image_with_donut(
 
         decoder_input_ids = donut_processor.tokenizer(
             task_prompt,
-            add_special_tokens=False, # Donut thường tự thêm token đặc biệt qua processor khi generate
+            add_special_tokens=False,
             return_tensors="pt"
         ).input_ids.to(device)
 
@@ -163,10 +161,7 @@ def run_parsing_pipeline(args):
         try:
             mlflow.pytorch.log_model(
                 pytorch_model=donut_model,
-                artifact_path="donut-model-hf-snapshot", # Tên thư mục trong artifacts
-                # signature= # Bỏ qua signature cho đơn giản trong dự án 1 ngày, nếu không sẽ rất phức tạp
-                # input_example= # Tương tự, bỏ qua input_example
-                # registered_model_name= # Sẽ đăng ký model nếu muốn dùng Model Registry
+                artifact_path="donut-model-hf-snapshot",
             )
             print("Donut pre-trained model snapshot logged to MLflow artifacts.")
             mlflow.log_param("mlflow_model_snapshot_logged", True)

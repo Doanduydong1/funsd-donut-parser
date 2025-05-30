@@ -46,6 +46,7 @@ funsd_dataset/testing_data/annotations/*
 
 # MLflow local data
 mlruns/
+**/mlruns/
 .mlflow_inputs_step_proxy_dir/
 mlflow-artifacts:/
 

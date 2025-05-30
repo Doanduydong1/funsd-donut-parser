@@ -41,6 +41,8 @@ share/python-wheels/
 MANIFEST
 
 # Dataset
+funsd_dataset/testing_data/images/*
+funsd_dataset/testing_data/annotations/*
 
 # MLflow local data
 mlruns/

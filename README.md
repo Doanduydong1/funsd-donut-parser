@@ -1,7 +1,7 @@
 ## 👨‍💻 Me
 
 - **Trần Mạnh Khôi**
-- GitHub: [Doanduyduong1](https://github.com/khoitm11)
+- GitHub: [khoitm11](https://github.com/khoitm11)
 - LinkedIn: [khoitm11](https://www.linkedin.com/in/khoitm11)
 
 Another Project when i attached wrong link: https://github.com/khoitm11/Option_Pricing_and_Risk_Analytics_Simulator
